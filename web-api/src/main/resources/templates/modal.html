@@ -1,0 +1,55 @@
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ng-click="cancel()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="rounded shadow-sm">
+                    <div class="tw-block-parent">
+                        <div class="timeline-TweetList-tweet">
+                            <div class="timeline-Tweet">
+                                <div class="timeline-Tweet-brand">
+                                </div>
+                                <div class="timeline-Tweet-author">
+                                    <div class="TweetAuthor">
+                                        <a class="TweetAuthor-link" href="#channel"></a>
+                                        <span class="TweetAuthor-avatar">
+                                        </span>
+                                        <span class="TweetAuthor-name">{{generatedTweet.name}}</span>
+                                        <span class="Icon Icon--verified"> </span>
+                                        <span class="TweetAuthor-screenName">@{{generatedTweet.username}}</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-Tweet-text">
+                                    {{generatedTweet.text}}
+                                    <!--                                        <section ng-repeat="hashtag in tweet.entities.hashtags">-->
+                                    <!--                                            <a href="#">#{{hashtag.tag}} </a>-->
+                                    <!--                                        </section>-->
+                                </div>
+                                <!--                                    <div class="timeline-Tweet-media" ng-repeat="url in tweet.entities.urls">-->
+                                <!--                                        <div class="timeline-Tweet-text text-center" ng-repeat="image in url.images">-->
+                                <!--                                            <img alt="{{url.description}}" class="bordered-image" src="{{image.url}}"-->
+                                <!--                                                 width="400">-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span></div>
+                                <ul class="timeline-Tweet-actions">
+                                    <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
+                                    <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" ng-click="close()">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="publish()">Publish post</button>
+            </div>
+        </div>
+    </div>
+</div>

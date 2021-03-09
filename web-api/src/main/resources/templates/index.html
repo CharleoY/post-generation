@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="indexCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="title"></title>
+    <script src="/vendor/angular_1.6.1.js"></script>
+    <script src="/vendor/app.js"></script>
+    <script src="/vendor/loginCtrl.js"></script>
+
+    <script src="/js/js.cookie.min.js"></script>
+    <!--===============================================================================================-->
+    <link href="/images/icons/favicon.ico" rel="icon" type="image/png"/>
+    <!--===============================================================================================-->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/animate/animate.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/animsition/css/animsition.min.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/select2/select2.min.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/css/util.css" rel="stylesheet" type="text/css">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
+    <link href="/css/search.css" rel="stylesheet"/>
+
+    <link href="/css/main.css" media="all"
+          rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+<a href="/search">Search</a>
+
+<div class="container">
+    <div class="col-md-4">
+        <div class="tw-block-parent">
+            <div class="timeline-TweetList-tweet">
+                <div class="timeline-Tweet">
+                    <div class="timeline-Tweet-brand">
+                        <div class="Icon Icon--twitter"></div>
+                    </div>
+                    <div class="timeline-Tweet-author">
+                        <div class="TweetAuthor">
+                            <a class="TweetAuthor-link" href="#channel"></a>
+                            <span class="TweetAuthor-avatar">
+                                <div class="Avatar"> </div>
+                            </span>
+                            <span class="TweetAuthor-name">{{author}}</span>
+                            <span class="Icon Icon--verified"> </span>
+                            <span class="TweetAuthor-screenName">@TwitterDev</span>
+                        </div>
+                    </div>
+                    <div class="timeline-Tweet-text">
+                        We're excited for the inaugural Twitter Community Meetup
+                        <a href="#">@TwitterSeattle</a>
+                        <span>tomorrow!</span>
+                        <a href="#">#TapIntoTwitter</a>
+                        <a href="#">meetup.com/Seattle-Twitte…</a>
+                    </div>
+                    <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span></div>
+                    <ul class="timeline-Tweet-actions">
+                        <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
+                        <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function () {
+                div.style.display = "none";
+            }, 600);
+        }
+    }
+</>
+
+</html>
