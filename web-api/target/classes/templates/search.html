@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="searchCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="title"></title>
+    <script src="/vendor/angular_1.6.1.js"></script>
+    <script src="/vendor/app.js"></script>
+    <script src="/vendor/loginCtrl.js"></script>
+    <script src="/js/js.cookie.min.js"></script>
+    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/doc.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <link href="/images/icons/favicon.ico" rel="icon" type="image/png"/>
+    <!--===============================================================================================-->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+          rel="stylesheet"
+          type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/animate/animate.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/animsition/css/animsition.min.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/select2/select2.min.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/vendor/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <!--===============================================================================================-->
+    <link href="/css/util.css" rel="stylesheet" type="text/css">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/css/doc.css" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css"/>
+    <link href="/css/search.css" rel="stylesheet"/>
+
+    <link href="/css/main.css" media="all"
+          rel="stylesheet" type="text/css"/>
+
+</head>
+<body id="body">
+
+    <nav class="custom-navbar bd-subnavbar py-2">
+        <div class="row align-items-center">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="search-container">
+                    <div class="search-container text-center">
+                        <input class="form-control" name="username" ng-model="username" type="text">
+                        <button class="btn btn-blue" ng-click="findPostsByUserId(username)">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </nav>
+
+    <section id="content-div" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="right-menu">
+                        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+                            <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+                            <nav id="TableOfContents">
+                                <ul>
+                                    <li><a href="#core-concepts">Core concepts</a></li>
+                                    <li><a href="#available-breakpoints">Available breakpoints</a></li>
+                                    <li><a href="#media-queries">Media queries</a>
+                                        <ul>
+                                            <li><a href="#min-width">Min-width</a></li>
+                                            <li><a href="#max-width">Max-width</a></li>
+                                            <li><a href="#single-breakpoint">Single breakpoint</a></li>
+                                            <li><a href="#between-breakpoints">Between breakpoints</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="rounded shadow-sm" ng-repeat="tweet in Tweets">
+                        <div class="tw-block-parent">
+                            <div class="timeline-TweetList-tweet">
+                                <div class="timeline-Tweet">
+                                    <div class="timeline-Tweet-brand">
+                                    </div>
+                                    <div class="timeline-Tweet-author">
+                                        <div class="TweetAuthor">
+                                            <a class="TweetAuthor-link" href="#channel"></a>
+                                            <span class="TweetAuthor-avatar">
+                                            <div class="group">
+                                                <input id="{{tweet.id}}" type="checkbox" ng-model="tweet.selected"/>
+                                            </div>
+                                        </span>
+                                            <span class="TweetAuthor-name">{{tweet.name}}</span>
+                                            <span class="Icon Icon--verified"> </span>
+                                            <span class="TweetAuthor-screenName">@{{tweet.username}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-Tweet-text">
+                                        {{tweet.text}}
+                                        <section ng-repeat="hashtag in tweet.entities.hashtags">
+                                            <a href="#">#{{hashtag.tag}} </a>
+                                        </section>
+                                    </div>
+                                    <div class="timeline-Tweet-media" ng-repeat="url in tweet.entities.urls">
+                                        <div class="timeline-Tweet-text text-center" ng-repeat="image in url.images">
+                                            <img alt="{{url.description}}" class="bordered-image" src="{{image.url}}"
+                                                 width="400">
+                                        </div>
+                                    </div>
+                                    <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span></div>
+                                    <ul class="timeline-Tweet-actions">
+                                        <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
+                                        <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="right-menu">
+                        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+                            <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+                            <nav id="TableOfContentsRight">
+                                <ul>
+                                    <li><a href="#core-concepts">Core concepts</a></li>
+                                    <li><a href="#available-breakpoints">Available breakpoints</a></li>
+                                    <li><a href="#media-queries">Media queries</a>
+                                        <ul>
+                                            <li><a href="#min-width">Min-width</a></li>
+                                            <li><a href="#max-width">Max-width</a></li>
+                                            <li><a href="#single-breakpoint">Single breakpoint</a></li>
+                                            <li><a href="#between-breakpoints">Between breakpoints</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" ng-click="sendRequestToGenerateText()">Generate</button>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Generated post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="rounded shadow-sm">
+                        <div class="tw-block-parent">
+                            <div class="timeline-TweetList-tweet">
+                                <div class="timeline-Tweet">
+                                    <div class="timeline-Tweet-brand">
+                                    </div>
+                                    <div class="timeline-Tweet-author">
+                                        <div class="TweetAuthor">
+                                            <a class="TweetAuthor-link" href="#channel"></a>
+                                            <span class="TweetAuthor-avatar">
+                                        </span>
+                                            <span class="TweetAuthor-name">{{generatedTweet.name}}</span>
+                                            <span class="Icon Icon--verified"> </span>
+                                            <span class="TweetAuthor-screenName">@{{generatedTweet.username}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-Tweet-text">
+                                        {{generatedTweet.text}}
+                                        <!--                                        <section ng-repeat="hashtag in tweet.entities.hashtags">-->
+                                        <!--                                            <a href="#">#{{hashtag.tag}} </a>-->
+                                        <!--                                        </section>-->
+                                    </div>
+                                    <!--                                    <div class="timeline-Tweet-media" ng-repeat="url in tweet.entities.urls">-->
+                                    <!--                                        <div class="timeline-Tweet-text text-center" ng-repeat="image in url.images">-->
+                                    <!--                                            <img alt="{{url.description}}" class="bordered-image" src="{{image.url}}"-->
+                                    <!--                                                 width="400">-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span></div>
+                                    <ul class="timeline-Tweet-actions">
+                                        <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
+                                        <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary fa fa-refresh" ng-click="sendRequestToGenerateText()" data-bs-dismiss="modal">Regenerate</button>
+                    <button type="button disabled" class="btn btn-primary">Publish post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    window.onscroll = function () {
+        var difference = document.documentElement.scrollHeight - window.innerHeight;
+        var scrollposition = document.documentElement.scrollTop;
+
+        if (difference - scrollposition <= 2) {
+            var scope = angular.element(document.getElementById('body')).scope();
+            scope.$apply(function () {
+                scope.loadNextPage()
+            });
+        }
+    };
+
+</script>
+</html>

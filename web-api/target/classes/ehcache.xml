@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true" monitoring="autodetect">
+    <diskStore path="${java.io.tmpdir}/ehcache"/>
+
+    <defaultCache diskExpiryThreadIntervalSeconds="300" eternal="false" maxElementsInMemory="100"
+                  maxElementsOnDisk="100000"
+                  memoryStoreEvictionPolicy="LRU" timeToIdleSeconds="600" timeToLiveSeconds="1800"
+                  overflowToDisk="true"/>
+
+    <cache eternal="false" maxElementsInMemory="1000" name="USERCACHE" overflowToDisk="false" timeToLiveSeconds="1800"/>
+
+</ehcache>

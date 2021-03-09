@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="668c1a9d-358d-421a-b575-672a0b81a50f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1p4rrnBrVrMo9cWNWAWi8VHDIW4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web-api/src/main/resources/static/js" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/vendor/bootstrap/js" />
+      <recent name="$PROJECT_DIR$/web-api" />
+      <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/fonts/poppins" />
+      <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data-access/src/main/resources" />
+      <recent name="$PROJECT_DIR$/web-api/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/web-api/src/main/resources/templates/pages" />
+      <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/vendor" />
+      <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/vendor/angular" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.umidbek.data.access" />
+      <recent name="com.umidbek.webapi" />
+    </key>
+    <key name="MoveInnerDialog.RECENTS_KEY">
+      <recent name="com.umidbek.data.access.dto.twitter" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.umidbek.data.access.dto" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebApiApplication">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.umidbek.webapi.dto.open.ai.Main" />
+      <module name="web-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.umidbek.webapi.dto.open.ai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataAccessApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="data-access" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.umidbek.data.access.DataAccessApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.umidbek.webapi.WebApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="resources/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="data-access/src/main/resources/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="resources/docker-compose.yaml.database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="database" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="data-access/src/main/resources/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Docker.resources/docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="Docker.resources/docker-compose.yaml.database: Compose Deployment" />
+      <item itemvalue="Spring Boot.WebApiApplication" />
+      <item itemvalue="Spring Boot.DataAccessApplication (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.resources/docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.resources/docker-compose.yaml.database: Compose Deployment" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="668c1a9d-358d-421a-b575-672a0b81a50f" name="Default Changelist" comment="" />
+      <created>1614453406930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614453406930</updated>
+      <workItem from="1614453408149" duration="11762000" />
+      <workItem from="1614472661778" duration="31903000" />
+      <workItem from="1614670421985" duration="60000" />
+      <workItem from="1614877669531" duration="11201000" />
+      <workItem from="1614894180895" duration="7471000" />
+      <workItem from="1614965377586" duration="58929000" />
+      <workItem from="1615187858676" duration="3000" />
+      <workItem from="1615187900875" duration="49410000" />
+      <workItem from="1615287313452" duration="7239000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/AuthenticationRestController.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/AuthenticationRestController.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/security/JwtAuthenticationEntryPoint.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/ProfileController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/OpenAIController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/TwitterService.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/TwitterService.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/RegisterController.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/OpenAIController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/security/JwtAuthenticationTokenFilter.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/security/JwtAuthenticationTokenFilter.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="org.springframework.security.web.firewall.RequestRejectedException" package="org.springframework.security.web.firewall" />
+          <option name="timeStamp" value="56" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/post_generation$WebApiApplication.ic" NAME="WebApiApplication Coverage Results" MODIFIED="1615130788382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
