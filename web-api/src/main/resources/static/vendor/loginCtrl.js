@@ -67,7 +67,7 @@ app.controller('loginCtrl', function ($scope, $http) {
 app.controller('registerCtrl', function ($scope, $http) {
 
     $scope.title = "Post generation";
-    $scope.url = "http://localhost:8080";
+    $scope.url = "http://34.123.186.188:8080";
     $scope.authError = false;
     $scope.ErrorMsg = "";
 
@@ -115,7 +115,7 @@ app.controller('registerCtrl', function ($scope, $http) {
 app.controller('indexCtrl', function ($scope, $http) {
 
     $scope.title = "Post generation";
-    $scope.url = "http://localhost:8080";
+    $scope.url = "http://34.123.186.188:8080";
     $scope.authError = false;
     $scope.ErrorMsg = "";
 
@@ -126,7 +126,7 @@ app.controller('indexCtrl', function ($scope, $http) {
 app.controller('searchCtrl', function ($scope, $http) {
 
     $scope.title = "Search posts with username";
-    $scope.url = "http://localhost:8080";
+    $scope.url = "http://34.123.186.188:8080";
     $scope.authError = false;
     $scope.ErrorMsg = "";
     $scope.Properties = new Properties()
