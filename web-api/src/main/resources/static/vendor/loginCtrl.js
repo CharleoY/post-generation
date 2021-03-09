@@ -1,7 +1,7 @@
 app.controller('loginCtrl', function ($scope, $http) {
 
     $scope.title = "Post generation";
-    $scope.url = "http://localhost:8080";
+    $scope.url = "http://34.123.186.188:8080/register";
     $scope.authError = false;
     $scope.ErrorMsg = "";
 
@@ -197,7 +197,7 @@ app.controller('searchCtrl', function ($scope, $http) {
 
         let json = "\"username\": \"" +$scope.username + "\"}"
         $http({
-            url: "http://localhost:80/predict",
+            url: "http://34.123.186.188:80/predict",
             dataType: 'json',
             method: 'POST',
             data: json,
