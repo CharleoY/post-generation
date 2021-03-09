@@ -27,6 +27,7 @@ public class WebApiSecurityConfig extends WebSecurityConfigurerAdapter {
             "/css/**",
             "/js/**",
             "/images/**",
+            "/img/**",
             "/vendor/**",
             "/fonts/**",
             "/templates/**",

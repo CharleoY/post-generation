@@ -37,6 +37,7 @@ com/umidbek/webapi/controller/AuthenticationRestController.class
 com/umidbek/webapi/security/JwtUserFactory.class
 com/umidbek/webapi/dto/twitter/Image.class
 com/umidbek/webapi/dto/open/ai/Property.class
+com/umidbek/webapi/service/ImageGeneratorService.class
 com/umidbek/webapi/dto/twitter/Root.class
 com/umidbek/webapi/security/JwtUser.class
 com/umidbek/webapi/dto/ErrorResponse.class

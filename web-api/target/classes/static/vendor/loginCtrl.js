@@ -123,13 +123,13 @@ app.controller('indexCtrl', function ($scope, $http) {
 
 
 //Search Controller
-
 app.controller('searchCtrl', function ($scope, $http) {
 
     $scope.title = "Search posts with username";
     $scope.url = "http://localhost:8080";
     $scope.authError = false;
     $scope.ErrorMsg = "";
+    $scope.Properties = new Properties()
 
     $scope.findUserId = function (username) {
 
@@ -218,6 +218,23 @@ app.controller('searchCtrl', function ($scope, $http) {
         }
 
         $http({
+            url: $scope.url + "/open-ai/get-image",
+            dataType: 'json',
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': $scope.token
+            }
+        }).then(function (response) {
+            console.log(response)
+            $scope.generatedImageUrl = $scope.url + "/img/" + response.data.url;
+
+        }, function (errorResponse) {
+
+            console.log(errorResponse)
+        });
+
+        $http({
             url: $scope.url + "/open-ai/generate",
             dataType: 'json',
             method: 'POST',
@@ -248,7 +265,6 @@ app.controller('searchCtrl', function ($scope, $http) {
         })
 
     }
-
 
     $scope.isSign = function () {
         if (Cookies.get("token") == null) {
@@ -369,6 +385,11 @@ app.controller('searchCtrl', function ($scope, $http) {
     function GeneratedTweet(text, url, name, username) {
         this.text = text
         this.url = url
+    }
+
+    function Properties() {
+        this.temperature = 0
+        this.maxTokens = 30
     }
 });
 

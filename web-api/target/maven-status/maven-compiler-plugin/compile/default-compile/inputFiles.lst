@@ -11,6 +11,7 @@
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/controller/TwitterIntegrationController.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/dto/twitter/Annotation.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/dto/twitter/Hashtag.java
+/Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/service/ImageGeneratorService.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/dto/open/ai/Property.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/controller/AuthenticationRestController.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/security/JwtAuthenticationTokenFilter.java

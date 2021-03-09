@@ -45,171 +45,176 @@
 </head>
 <body id="body">
 
-    <nav class="custom-navbar bd-subnavbar py-2">
-        <div class="row align-items-center">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="search-container">
-                    <div class="search-container text-center">
-                        <input class="form-control" name="username" ng-model="username" type="text">
-                        <button class="btn btn-blue" ng-click="findPostsByUserId(username)">
-                            Search
-                        </button>
+<nav class="custom-navbar bd-subnavbar py-2">
+    <div class="row align-items-center">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="search-container">
+                <div class="search-container text-center">
+                    <input class="form-control" name="username" ng-model="username" type="text">
+                    <button class="btn btn-blue" ng-click="findPostsByUserId(username)">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</nav>
+
+<section class="content-section" id="content-div">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="right-menu">
+                    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+                        <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+                        <nav id="TableOfContents">
+                            <ul>
+                                <li><a href="#core-concepts">Core concepts</a></li>
+                                <li><a href="#available-breakpoints">Available breakpoints</a></li>
+                                <li><a href="#media-queries">Media queries</a>
+                                    <ul>
+                                        <li><a href="#min-width">Min-width</a></li>
+                                        <li><a href="#max-width">Max-width</a></li>
+                                        <li><a href="#single-breakpoint">Single breakpoint</a></li>
+                                        <li><a href="#between-breakpoints">Between breakpoints</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3"></div>
-        </div>
-    </nav>
-
-    <section id="content-div" class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="right-menu">
-                        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-                            <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
-                            <nav id="TableOfContents">
-                                <ul>
-                                    <li><a href="#core-concepts">Core concepts</a></li>
-                                    <li><a href="#available-breakpoints">Available breakpoints</a></li>
-                                    <li><a href="#media-queries">Media queries</a>
-                                        <ul>
-                                            <li><a href="#min-width">Min-width</a></li>
-                                            <li><a href="#max-width">Max-width</a></li>
-                                            <li><a href="#single-breakpoint">Single breakpoint</a></li>
-                                            <li><a href="#between-breakpoints">Between breakpoints</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="rounded shadow-sm" ng-repeat="tweet in Tweets">
-                        <div class="tw-block-parent">
-                            <div class="timeline-TweetList-tweet">
-                                <div class="timeline-Tweet">
-                                    <div class="timeline-Tweet-brand">
-                                    </div>
-                                    <div class="timeline-Tweet-author">
-                                        <div class="TweetAuthor">
-                                            <a class="TweetAuthor-link" href="#channel"></a>
-                                            <span class="TweetAuthor-avatar">
+            <div class="col-md-6">
+                <div class="rounded shadow-sm" ng-repeat="tweet in Tweets">
+                    <div class="tw-block-parent">
+                        <div class="timeline-TweetList-tweet">
+                            <div class="timeline-Tweet">
+                                <div class="timeline-Tweet-brand">
+                                </div>
+                                <div class="timeline-Tweet-author">
+                                    <div class="TweetAuthor">
+                                        <a class="TweetAuthor-link" href="#channel"></a>
+                                        <span class="TweetAuthor-avatar">
                                             <div class="group">
-                                                <input id="{{tweet.id}}" type="checkbox" ng-model="tweet.selected"/>
+                                                <input id="{{tweet.id}}" ng-model="tweet.selected" type="checkbox"/>
                                             </div>
                                         </span>
-                                            <span class="TweetAuthor-name">{{tweet.name}}</span>
-                                            <span class="Icon Icon--verified"> </span>
-                                            <span class="TweetAuthor-screenName">@{{tweet.username}}</span>
-                                        </div>
+                                        <span class="TweetAuthor-name">{{tweet.name}}</span>
+                                        <span class="Icon Icon--verified"> </span>
+                                        <span class="TweetAuthor-screenName">@{{tweet.username}}</span>
                                     </div>
-                                    <div class="timeline-Tweet-text">
-                                        {{tweet.text}}
-                                        <section ng-repeat="hashtag in tweet.entities.hashtags">
-                                            <a href="#">#{{hashtag.tag}} </a>
-                                        </section>
-                                    </div>
-                                    <div class="timeline-Tweet-media" ng-repeat="url in tweet.entities.urls">
-                                        <div class="timeline-Tweet-text text-center" ng-repeat="image in url.images">
-                                            <img alt="{{url.description}}" class="bordered-image" src="{{image.url}}"
-                                                 width="400">
-                                        </div>
-                                    </div>
-                                    <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span></div>
-                                    <ul class="timeline-Tweet-actions">
-                                        <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
-                                        <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
-                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="right-menu">
-                        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-                            <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
-                            <nav id="TableOfContentsRight">
-                                <ul>
-                                    <li><a href="#core-concepts">Core concepts</a></li>
-                                    <li><a href="#available-breakpoints">Available breakpoints</a></li>
-                                    <li><a href="#media-queries">Media queries</a>
-                                        <ul>
-                                            <li><a href="#min-width">Min-width</a></li>
-                                            <li><a href="#max-width">Max-width</a></li>
-                                            <li><a href="#single-breakpoint">Single breakpoint</a></li>
-                                            <li><a href="#between-breakpoints">Between breakpoints</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" ng-click="sendRequestToGenerateText()">Generate</button>
-                                    </li>
+                                <div class="timeline-Tweet-text">
+                                    {{tweet.text}}
+                                    <section ng-repeat="hashtag in tweet.entities.hashtags">
+                                        <a href="#">#{{hashtag.tag}} </a>
+                                    </section>
+                                </div>
+                                <div class="timeline-Tweet-media" ng-repeat="url in tweet.entities.urls">
+                                    <div class="timeline-Tweet-text text-center" ng-repeat="image in url.images">
+                                        <img alt="{{url.description}}" class="bordered-image" src="{{image.url}}"
+                                             width="400">
+                                    </div>
+                                </div>
+                                <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span>
+                                </div>
+                                <ul class="timeline-Tweet-actions">
+                                    <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
+                                    <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
                                 </ul>
-                            </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="col-md-3">
+                <div class="right-menu">
+                    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Generated post</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="rounded shadow-sm">
-                        <div class="tw-block-parent">
-                            <div class="timeline-TweetList-tweet">
-                                <div class="timeline-Tweet">
-                                    <div class="timeline-Tweet-brand">
-                                    </div>
-                                    <div class="timeline-Tweet-author">
-                                        <div class="TweetAuthor">
-                                            <a class="TweetAuthor-link" href="#channel"></a>
-                                            <span class="TweetAuthor-avatar">
-                                        </span>
-                                            <span class="TweetAuthor-name">{{generatedTweet.name}}</span>
-                                            <span class="Icon Icon--verified"> </span>
-                                            <span class="TweetAuthor-screenName">@{{generatedTweet.username}}</span>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-Tweet-text">
-                                        {{generatedTweet.text}}
-                                        <!--                                        <section ng-repeat="hashtag in tweet.entities.hashtags">-->
-                                        <!--                                            <a href="#">#{{hashtag.tag}} </a>-->
-                                        <!--                                        </section>-->
-                                    </div>
-                                    <!--                                    <div class="timeline-Tweet-media" ng-repeat="url in tweet.entities.urls">-->
-                                    <!--                                        <div class="timeline-Tweet-text text-center" ng-repeat="image in url.images">-->
-                                    <!--                                            <img alt="{{url.description}}" class="bordered-image" src="{{image.url}}"-->
-                                    <!--                                                 width="400">-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>-->
-                                    <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span></div>
-                                    <ul class="timeline-Tweet-actions">
-                                        <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
-                                        <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <strong class="d-block h6 my-2 pb-2 border-bottom">Properties</strong>
+                        <div class="input-group mb-3">
+                            <span>Creatively degree</span>
+                            <br>
+                            <input class="form-range" id="customRange1" max="1" min="0" type="range"
+                                   value="{{Properties.temperature}}">
                         </div>
+                        <div class="input-group mb-3">
+                            <span>Size of generating text:</span>
+                            <br>
+                            <input class="form-control" type="number" value="{{Properties.maxTokens}}"/>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button class="btn btn-outline-primary" data-target="#exampleModal" data-toggle="modal"
+                                    ng-click="sendRequestToGenerateText()" type="button">Generate
+                            </button>
+                        </div>
+
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary fa fa-refresh" ng-click="sendRequestToGenerateText()" data-bs-dismiss="modal">Regenerate</button>
-                    <button type="button disabled" class="btn btn-primary">Publish post</button>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Generated post</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <div class="rounded shadow-sm">
+                    <div class="tw-block-parent">
+                        <div class="timeline-TweetList-tweet">
+                            <div class="timeline-Tweet">
+                                <div class="timeline-Tweet-brand">
+                                </div>
+                                <div class="timeline-Tweet-author">
+                                    <div class="TweetAuthor">
+                                        <a class="TweetAuthor-link" href="#channel"></a>
+                                        <span class="TweetAuthor-avatar">
+                                        </span>
+                                        <span class="TweetAuthor-name">{{name}}</span>
+                                        <span class="Icon Icon--verified"> </span>
+                                        <span class="TweetAuthor-screenName">@ {{username}}</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-Tweet-text">
+                                    {{generatedTweet.text}}
+                                    <!--                                        <section ng-repeat="hashtag in tweet.entities.hashtags">-->
+                                    <!--                                            <a href="#">#{{hashtag.tag}} </a>-->
+                                    <!--                                        </section>-->
+                                </div>
+                                <div class="timeline-Tweet-media">
+                                    <div class="timeline-Tweet-text text-center">
+                                        <img alt="{{url.description}}" class="bordered-image" src="{{generatedImageUrl}}"
+                                             width="400">
+                                    </div>
+                                </div>
+                                <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">9h</span>
+                                </div>
+                                <ul class="timeline-Tweet-actions">
+                                    <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
+                                    <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary fa fa-refresh" data-bs-dismiss="modal" ng-click="sendRequestToGenerateText()"
+                        type="button">Regenerate
+                </button>
+                <button class="btn btn-primary" type="button disabled">Publish post</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 

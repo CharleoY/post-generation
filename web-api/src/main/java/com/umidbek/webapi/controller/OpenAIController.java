@@ -1,13 +1,14 @@
 package com.umidbek.webapi.controller;
 
 import com.umidbek.webapi.dto.open.ai.GenerationRequest;
-import com.umidbek.webapi.dto.open.ai.Property;
 import com.umidbek.webapi.dto.open.ai.Response;
 import com.umidbek.webapi.exception.OpenAiException;
+import com.umidbek.webapi.service.ImageGeneratorService;
 import com.umidbek.webapi.service.OpenAiService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -17,13 +18,24 @@ public class OpenAIController {
 
     private static final Logger LOGGER = Logger.getLogger(OpenAIController.class.getCanonicalName());
     private final OpenAiService openAiService;
+    private final ImageGeneratorService imageGeneratorService;
 
-    public OpenAIController(OpenAiService openAiService) {
+    public OpenAIController(OpenAiService openAiService, ImageGeneratorService imageGeneratorService) {
         this.openAiService = openAiService;
+        this.imageGeneratorService = imageGeneratorService;
+    }
+
+    @GetMapping("/get-image")
+    public ResponseEntity<String> getImageUrl() throws IOException, InterruptedException {
+
+        String path = imageGeneratorService.getGeneratedImageUrl();
+        String url = "{\"url\":\"" + path + "\"}";
+        return ResponseEntity.ok(url);
     }
 
     @PostMapping("/generate")
     public ResponseEntity<?> generate(@RequestBody List<String> texts) {
+
         LOGGER.info("Request received: " + texts.toString());
 
         try {

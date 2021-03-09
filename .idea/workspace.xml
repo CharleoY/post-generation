@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="668c1a9d-358d-421a-b575-672a0b81a50f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/ImageGeneratorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/config/WebApiSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/config/WebApiSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/config/WebAppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/OpenAIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/OpenAIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/resources/static/vendor/loginCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/resources/static/vendor/loginCtrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/resources/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/resources/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/config/WebApiSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/config/WebApiSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/config/WebAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/config/WebAppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/controller/OpenAIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/controller/OpenAIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/classes/static/vendor/loginCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/static/vendor/loginCtrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/classes/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/web-api-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/web-api-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/target/web-api-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/web-api-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +38,10 @@
       <list>
         <option value="Interface" />
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web-api/src/main/resources/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gan/results" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -54,11 +75,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gan/results" />
       <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/vendor/bootstrap/js" />
       <recent name="$PROJECT_DIR$/web-api" />
       <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/fonts/poppins" />
-      <recent name="$PROJECT_DIR$/web-api/src/main/resources/static/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data-access/src/main/resources" />
@@ -86,6 +107,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.WebApiApplication">
+    <configuration name="ImageGeneratorService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.umidbek.webapi.service.ImageGeneratorService" />
+      <module name="web-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.umidbek.webapi.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.umidbek.webapi.dto.open.ai.Main" />
       <module name="web-api" />
@@ -153,9 +187,11 @@
       <item itemvalue="Docker.resources/docker-compose.yaml.database: Compose Deployment" />
       <item itemvalue="Spring Boot.WebApiApplication" />
       <item itemvalue="Spring Boot.DataAccessApplication (1)" />
+      <item itemvalue="Application.ImageGeneratorService" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ImageGeneratorService" />
         <item itemvalue="Docker.resources/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.resources/docker-compose.yaml.database: Compose Deployment" />
         <item itemvalue="Application.Main" />
@@ -181,7 +217,7 @@
       <workItem from="1614965377586" duration="58929000" />
       <workItem from="1615187858676" duration="3000" />
       <workItem from="1615187900875" duration="49410000" />
-      <workItem from="1615287313452" duration="7750000" />
+      <workItem from="1615287313452" duration="16016000" />
     </task>
     <servers />
   </component>
@@ -212,28 +248,8 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/OpenAIController.java</url>
-          <line>39</line>
+          <line>51</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -253,18 +269,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/OpenAIController.java</url>
-          <line>26</line>
+          <line>38</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/security/JwtAuthenticationTokenFilter.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="65" />
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/ImageGeneratorService.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/security/JwtAuthenticationTokenFilter.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="66" />
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/IndexController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/ImageGeneratorService.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/IndexController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/ImageGeneratorService.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="org.springframework.security.web.firewall.RequestRejectedException" package="org.springframework.security.web.firewall" />
