@@ -193,6 +193,26 @@ app.controller('searchCtrl', function ($scope, $http) {
             });
     }
 
+    $scope.detectPersonality = function () {
+
+        let json = "\"username\": \"" +$scope.username + "\"}"
+        $http({
+            url: "http://localhost:80/predict",
+            dataType: 'json',
+            method: 'POST',
+            data: json,
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        }).then(function (response) {
+
+            $scope.Prediction = response.data["prediction"]
+
+        },
+        function (errorResponse) {
+            });
+    }
+
     $scope.sendRequestToGenerateText = function () {
         var texts = []
         var images = []
