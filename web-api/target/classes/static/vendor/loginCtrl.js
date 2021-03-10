@@ -196,7 +196,7 @@ app.controller('searchCtrl', function ($scope, $http) {
     $scope.detectPersonality = function () {
 
         $http({
-            url: "http://34.123.186.188:80/open-ai/prediction/" + $scope.username,
+            url: "http://34.123.186.188:8080/open-ai/prediction/" + $scope.username,
             dataType: 'json',
             method: 'GET',
             headers: {
