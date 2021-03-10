@@ -146,10 +146,10 @@ public class OpenAiService {
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.add("Authorization", token);
 
-        String json = "{\"usernmae\":\"" + username+ "\"}";
+        String json = "{\"username\":\"" + username+ "\"}";
 
-        HttpEntity<String> entity = new HttpEntity<>(username, headers);
-
+        HttpEntity<String> entity = new HttpEntity<>(json, headers);
+        String url = "http://34.123.186.188:8082/peredict";
         try {
             ResponseEntity<Prediction> responseEntity = restTemplate.exchange(url, HttpMethod.POST, entity, Prediction.class);
 
