@@ -195,14 +195,13 @@ app.controller('searchCtrl', function ($scope, $http) {
 
     $scope.detectPersonality = function () {
 
-        let json = "{\"username\": \"" +$scope.username + "\"}"
         $http({
-            url: "http://localhost:80/predict",
+            url: "http://34.123.186.188:80/open-ai/prediction/" + $scope.username,
             dataType: 'json',
-            method: 'POST',
-            data: json,
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': $scope.token
             }
         }).then(function (response) {
             console.log(response)

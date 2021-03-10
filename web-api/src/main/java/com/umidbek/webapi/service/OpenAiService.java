@@ -1,6 +1,7 @@
 package com.umidbek.webapi.service;
 
 import com.google.gson.Gson;
+import com.umidbek.webapi.dto.Prediction;
 import com.umidbek.webapi.dto.open.ai.Choice;
 import com.umidbek.webapi.dto.open.ai.Property;
 import com.umidbek.webapi.dto.open.ai.Response;
@@ -17,6 +18,7 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 @Service
@@ -135,6 +137,38 @@ public class OpenAiService {
             LOGGER.warning("Exception message: " + e.getMessage());
             throw new OpenAiException(e.getMessage());
         }
+    }
+
+    public Prediction getPrediction(String username) {
+        RestTemplate restTemplate = new RestTemplate();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.add("Authorization", token);
+
+        String json = "{\"usernmae\":\"" + username+ "\"}";
+
+        HttpEntity<String> entity = new HttpEntity<>(username, headers);
+
+        try {
+            ResponseEntity<Prediction> responseEntity = restTemplate.exchange(url, HttpMethod.POST, entity, Prediction.class);
+
+            LOGGER.info("Response from PERS: " + Objects.requireNonNull(responseEntity.getBody()).getPrediction());
+            return responseEntity.getBody();
+        }
+        catch (HttpClientErrorException e) {
+            LOGGER.warning("Client exception message: PERS" + e.getMessage());
+            throw new OpenAiException(e.getMessage());
+        }
+        catch (HttpServerErrorException e) {
+            LOGGER.warning("Server exception message: PERS" + e.getMessage());
+            throw new OpenAiException(e.getMessage());
+        }
+        catch (Exception e) {
+            LOGGER.warning("Exception message: " + e.getMessage());
+            throw new OpenAiException(e.getMessage());
+        }
+
     }
 
     private String ideas(List<String> texts) {

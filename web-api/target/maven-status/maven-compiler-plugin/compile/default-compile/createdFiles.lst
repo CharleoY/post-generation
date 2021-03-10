@@ -30,6 +30,7 @@ com/umidbek/webapi/utils/SecurityUtils.class
 com/umidbek/webapi/security/JwtAuthenticationTokenFilter.class
 com/umidbek/webapi/dto/twitter/Datum.class
 com/umidbek/webapi/dto/twitter/Annotation.class
+com/umidbek/webapi/dto/Prediction.class
 com/umidbek/webapi/controller/ProfileController.class
 com/umidbek/webapi/controller/TwitterIntegrationController.class
 com/umidbek/webapi/controller/LoginController.class

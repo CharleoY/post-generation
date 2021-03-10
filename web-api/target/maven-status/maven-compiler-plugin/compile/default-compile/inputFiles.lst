@@ -9,6 +9,7 @@
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/dto/twitter/Entities.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/utils/SecurityUtils.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/controller/TwitterIntegrationController.java
+/Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/dto/Prediction.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/dto/twitter/Annotation.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/dto/twitter/Hashtag.java
 /Users/a19017828/IdeaProjects/post-generation/web-api/src/main/java/com/umidbek/webapi/service/ImageGeneratorService.java

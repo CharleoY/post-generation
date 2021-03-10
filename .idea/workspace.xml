@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="668c1a9d-358d-421a-b575-672a0b81a50f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-api/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/service/OpenAiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/target/classes/com/umidbek/webapi/service/OpenAiService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-api/src/main/resources/static/vendor/loginCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-api/src/main/resources/static/vendor/loginCtrl.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +184,7 @@
       <workItem from="1615187858676" duration="3000" />
       <workItem from="1615187900875" duration="49410000" />
       <workItem from="1615287313452" duration="18122000" />
-      <workItem from="1615389567999" duration="1955000" />
+      <workItem from="1615389567999" duration="3979000" />
     </task>
     <servers />
   </component>
@@ -277,8 +271,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web-api/src/main/java/com/umidbek/webapi/service/OpenAiService.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="86" />
+          <line>76</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="org.springframework.security.web.firewall.RequestRejectedException" package="org.springframework.security.web.firewall" />

@@ -1,5 +1,6 @@
 package com.umidbek.webapi.controller;
 
+import com.umidbek.webapi.dto.Prediction;
 import com.umidbek.webapi.dto.open.ai.GenerationRequest;
 import com.umidbek.webapi.dto.open.ai.Response;
 import com.umidbek.webapi.exception.OpenAiException;
@@ -23,6 +24,17 @@ public class OpenAIController {
     public OpenAIController(OpenAiService openAiService, ImageGeneratorService imageGeneratorService) {
         this.openAiService = openAiService;
         this.imageGeneratorService = imageGeneratorService;
+    }
+
+    @GetMapping("/prediction/{username}")
+    public ResponseEntity<?> getPrediction(@PathVariable String username) {
+        try {
+            Prediction response = openAiService.getPrediction(username);
+
+            return ResponseEntity.ok(response);
+        } catch (OpenAiException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @GetMapping("/get-image")
