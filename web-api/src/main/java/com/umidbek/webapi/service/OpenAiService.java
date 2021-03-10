@@ -1,9 +1,12 @@
 package com.umidbek.webapi.service;
 
 import com.google.gson.Gson;
+import com.umidbek.webapi.dto.open.ai.Choice;
 import com.umidbek.webapi.dto.open.ai.Property;
 import com.umidbek.webapi.dto.open.ai.Response;
 import com.umidbek.webapi.exception.OpenAiException;
+import javafx.scene.effect.Blend;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -67,7 +70,26 @@ public class OpenAiService {
             ResponseEntity<Response> responseEntity = restTemplate.exchange(url, HttpMethod.POST, entity, Response.class);
 
             LOGGER.info("Response from openai: " + responseEntity.getBody().toString());
-            return responseEntity.getBody();
+
+            Response response = responseEntity.getBody();
+
+            Choice choice = response.choices.get(0);
+            String[] sentences = choice.getText().split(".(?=(\\.|\\?|\\!))");
+            StringBuilder builder = new StringBuilder();
+            int length = sentences.length;
+            if (length > 1) {
+                for (int i = 0; i < length - 1; i++) {
+                    builder.append(sentences[i]);
+                }
+
+                if (StringUtils.isNotEmpty(sentences[length - 1])) {
+                    builder.append(sentences[length - 1].charAt(0));
+                }
+
+                response.getChoices().get(0).setText(builder.toString());
+            }
+
+            return response;
         }
         catch (HttpClientErrorException e) {
             LOGGER.warning("Client exception message: " + e.getMessage());

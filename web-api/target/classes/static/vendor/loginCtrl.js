@@ -197,7 +197,7 @@ app.controller('searchCtrl', function ($scope, $http) {
 
         let json = "\"username\": \"" +$scope.username + "\"}"
         $http({
-            url: "http://34.123.186.188:80/predict",
+            url: "http://localhost:80/predict",
             dataType: 'json',
             method: 'POST',
             data: json,

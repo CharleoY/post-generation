@@ -2,6 +2,7 @@ package com.umidbek.webapi.controller;
 
 import com.umidbek.data.access.service.ProfileService;
 import com.umidbek.webapi.service.ImageGeneratorService;
+import com.umidbek.webapi.service.OpenAiService;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -16,16 +17,18 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/")
 public class IndexController {
 
     private final ProfileService userService;
-    private final ImageGeneratorService imageGeneratorService;
-    public IndexController(ProfileService userService, ImageGeneratorService imageGeneratorService) {
+    private final OpenAiService openAiService;
+    public IndexController(ProfileService userService, OpenAiService openAiService) {
         this.userService = userService;
-        this.imageGeneratorService = imageGeneratorService;
+        this.openAiService = openAiService;
     }
 
     @RequestMapping(path = "/img/{name}", method = RequestMethod.GET)
@@ -50,7 +53,12 @@ public class IndexController {
 
     @GetMapping
     public ModelAndView index(Model model) throws IOException, InterruptedException {
+        List<String> list = new ArrayList<>();
+        list.add("What was the last song you played in your BMW?");
+        list.add("It depends on your personal taste and preferences. If you require any assistance in making the right choice, we would suggest contacting your BMW dealer directly by telephone or online.");
+        list.add("Which one is your favourite model?");
 
+        openAiService.sentTextsToOpenAi(list);
         return new ModelAndView("index");
     }
 }
