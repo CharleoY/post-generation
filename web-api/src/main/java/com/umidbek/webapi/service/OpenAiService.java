@@ -144,12 +144,13 @@ public class OpenAiService {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.add("Authorization", token);
 
         String json = "{\"username\":\"" + username+ "\"}";
 
+        LOGGER.info("Sent request to the prediction server: " + json);
+
         HttpEntity<String> entity = new HttpEntity<>(json, headers);
-        String url = "http://34.123.186.188:8082/peredict";
+        String url = "http://34.123.186.188:8082/predict";
         try {
             ResponseEntity<Prediction> responseEntity = restTemplate.exchange(url, HttpMethod.POST, entity, Prediction.class);
 
