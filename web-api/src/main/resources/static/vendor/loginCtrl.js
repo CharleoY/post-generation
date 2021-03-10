@@ -195,7 +195,7 @@ app.controller('searchCtrl', function ($scope, $http) {
 
     $scope.detectPersonality = function () {
 
-        let json = "\"username\": \"" +$scope.username + "\"}"
+        let json = "{\"username\": \"" +$scope.username + "\"}"
         $http({
             url: "http://localhost:80/predict",
             dataType: 'json',
@@ -205,12 +205,13 @@ app.controller('searchCtrl', function ($scope, $http) {
                 'Content-Type': 'application/json',
             }
         }).then(function (response) {
-
+            console.log(response)
             $scope.Prediction = response.data["prediction"]
 
         },
         function (errorResponse) {
-            });
+            console.log(errorResponse)
+        });
     }
 
     $scope.sendRequestToGenerateText = function () {
