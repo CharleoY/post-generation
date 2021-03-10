@@ -217,6 +217,8 @@ app.controller('searchCtrl', function ($scope, $http) {
         var texts = []
         var images = []
         let length = $scope.Tweets.length;
+        $scope.detectPersonality()
+
         for( let i = 0; i < length; i ++) {
             let tweet = $scope.Tweets[i];
 
